@@ -24,4 +24,4 @@ else
   # Choice must be either "r" or "c"
   puts "You have entered an invalid choice."
 end
-  end
+end
