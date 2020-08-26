@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-rectangle = Object.new
-def rectangle.question
-  puts "Do you want to get the area of a [r]ectangle or a [c]ircle?"
-end
