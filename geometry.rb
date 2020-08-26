@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Define a pi constant 
+
 print "Do you want to get the area of a [r]ectangle or a [c]ircle? "
 choice = gets.chomp
 # Initialize area
@@ -19,7 +21,7 @@ elsif choice == "c"
   print "What is the radius of the circle (in meters)? "
   radius = gets.to_f
   # calculates and says the area of the circle
-  area = radius * radius * 3.14159265359
+  area = radius * radius * Math::PI
   
 else
   # Choice must be either "r" or "c"
