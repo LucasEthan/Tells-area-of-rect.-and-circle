@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Define a pi constant 
+
 
 print "Do you want to get the area of a [r]ectangle or a [c]ircle? "
 choice = gets.chomp
@@ -27,4 +27,4 @@ else
   # Choice must be either "r" or "c"
   puts "You have entered an invalid choice."
 end
-puts(format("The area is  %.2f m, bye!", area))
+puts(format("The area is  %.2f m, bye!", area)) unless area.zero?
