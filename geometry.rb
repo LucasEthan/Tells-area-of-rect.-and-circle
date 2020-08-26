@@ -1,4 +1,4 @@
-  #!/usr/bin/env ruby
+#!/usr/bin/env ruby
 print "Do you want to get the area of a [r]ectangle or a [c]ircle? "
 choice = gets.chomp
 
