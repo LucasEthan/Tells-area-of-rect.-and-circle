@@ -3,6 +3,7 @@
 require_relative "rectangle"
 require_relative "circle"
 
+loop do
 print "Do you want to calculate a [r]ectangle or a [c]ircle? "
 choice = gets.chomp
 
@@ -31,12 +32,17 @@ elsif choice == "c"
   area = circle.area
   diameter = circle.diameter
   circumference = circle.circumference
-  
 else
-  # Choice must be either "r" or "c"
-  puts "You have entered an invalid choice."
+  puts "You have entered a invalid input"
 end
+
 puts(format("The area is %.2f m", area)) unless area.zero?
 puts(format("The perimeter is %.2f m", perimeter)) unless perimeter.zero?
 puts(format("The diameter is %.2f m", diameter)) unless diameter.zero?
 puts(format("The circumference is %.2f m", circumference)) unless circumference.zero?
+
+print "Do you want to quit yes or no? [y/n]: "
+choice = gets.chomp.upcase
+
+break if choice == "Y"
+end
