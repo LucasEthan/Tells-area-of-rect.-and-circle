@@ -16,14 +16,17 @@ diameter = 0.0
 if choice == "r"
   # Asks user for length
   print "What is the length of the rectangle (in meters ?) ".chomp
-  length = Integer(gets)
-  # Asks user for width
-  print "What is the width of the rectangle (in meters ?) "
-  width = Integer(gets)
-  rectangle = Rectangle.new(length, width)
-  area = rectangle.area
-  perimeter = rectangle.perimeter
-    
+  if length = Integer(gets) > 0
+    # Asks user for width
+    print "What is the width of the rectangle (in meters ?) "
+    width = Integer(gets)
+    rectangle = Rectangle.new(length, width)
+    area = rectangle.area
+    perimeter = rectangle.perimeter
+    else
+      puts "You have entered a invalid input"
+    end
+      
 elsif choice == "c"
   # Asks the user for radius
   print "What is the radius of the circle (in meters)? "
