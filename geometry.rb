@@ -16,22 +16,24 @@ begin
     if choice == "r"
       # Asks user for length
       print "What is the length of the rectangle (in meters ?) "
-      if length = Integer(gets)
-        if length > 0
+      length = Integer(gets)
+      if length > 0
           # Asks user for width
           print "What is the width of the rectangle (in meters ?) "
           width = Integer(gets)
           rectangle = Rectangle.new(length, width)
           area = rectangle.area
           perimeter = rectangle.perimeter
-        else
-            puts "You have entered a invalid input"
-        end
+
+          else
+          puts "You have entered a invalid input"
+          end
 
         elsif choice == "c"
           # Asks the user for radius
           print "What is the radius of the circle (in meters)? "
-          if radius = Integer(gets) > 0
+          radius = Integer(gets)
+          ifradiuss > 0
             circle = Circle.new(radius)
             area = circle.area
             diameter = circle.diameter
@@ -57,4 +59,3 @@ begin
     rescue ArgumentError => e
         puts "You have entered an invalid input"
     end
-  end
