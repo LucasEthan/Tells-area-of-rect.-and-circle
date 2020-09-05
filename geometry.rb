@@ -48,11 +48,11 @@ end
 begin
   loop do
     print "Do you want to calculate a [r]ectangle or a [c]ircle? "
-    choice = gets.chomp
+    choice = gets.chomp.upcase
 
-    if choice == "r" 
+    if choice == "R"
       calculate_for_rectangle
-    elsif choice == "c"
+    elsif choice == "C"
       calculate_for_circle
     else
       puts "You must enter either r or c "
