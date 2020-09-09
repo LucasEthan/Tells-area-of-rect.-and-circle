@@ -41,10 +41,29 @@ def calculate_for_rectangle
   display_results_rectangle(area, perimeter)
 end
 
+def get_radius
+   print "What is the radius of the circle (in meters)? "
+   radius = Integer(gets)
+end
+
+def perform_calculations_circle(radius)
+  circle = Circle.new(radius)
+  area = circle.area
+  diameter = circle.diameter
+  circumference = circle.circumference
+
+  [area, diameter, circumference]
+end
+
+def display_results_circle(area, diameter, circumference)
+  puts(format("The area is %.2f m", area))
+  puts(format("The diameter is %.2f m", diameter))
+  puts(format("The circumference is %.2f m", circumference))
+end
+
 def calculate_for_circle
-  # Asks the user for radius
-  print "What is the radius of the circle (in meters)? "
-  radius = Integer(gets)
+
+  radius = get_radius
 
   # Guard clause
   unless radius.positive?
@@ -52,13 +71,9 @@ def calculate_for_circle
     return
   end
 
-  circle = Circle.new(radius)
-  area = circle.area
-  diameter = circle.diameter
-  circumference = circle.circumference 
-  
-  puts(format("The diameter is %.2f m", diameter)) 
-  puts(format("The circumference is %.2f m", circumference))
+  diameter, circumference = perform_calculations_circle(radius)
+
+  display_results_circle(area, diameter, circumference)
 end
 
 begin
