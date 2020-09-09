@@ -71,7 +71,7 @@ def calculate_for_circle
     return
   end
 
-  diameter, circumference = perform_calculations_circle(radius)
+  area, diameter, circumference = perform_calculations_circle(radius)
 
   display_results_circle(area, diameter, circumference)
 end
