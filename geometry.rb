@@ -3,35 +3,34 @@
 require_relative "rectangle"
 require_relative "circle"
 
-def get_length_and_width
+def gets_length_and_width
   print "What is the length of the rectangle (in meters ?) "
   length = Integer(gets)
 
   print "What is the width of the rectangle (in meters ?) "
   width = Integer(gets)
 
-  [length,width]
+  [length, width]
 end
 
 def perform_calculations_rectangle(length, width)
   rectangle = Rectangle.new(length, width)
   area = rectangle.area
-  perimeter = rectangle.perimeter  
+  perimeter = rectangle.perimeter
 
   [area, perimeter]
 end
 
 def display_results_rectangle(area, perimeter)
-   puts(format("The area is %.2f m", area))
-   puts(format("The perimeter is %.2f m", perimeter))
+  puts(format("The area is %.2f m", area))
+  puts(format("The perimeter is %.2f m", perimeter))
 end
 
 def calculate_for_rectangle
-
   length, width = get_length_and_width
 
   # Guard clause
-  unless length.positive? && width.positive? 
+  unless length.positive? && width.positive?
     puts "Length and width must be positive"
     return
   end
@@ -41,9 +40,9 @@ def calculate_for_rectangle
   display_results_rectangle(area, perimeter)
 end
 
-def get_radius
-   print "What is the radius of the circle (in meters)? "
-   radius = Integer(gets)
+def gets_radius
+  print "What is the radius of the circle (in meters)? "
+  radius = Integer(gets)
 end
 
 def perform_calculations_circle(radius)
@@ -62,7 +61,6 @@ def display_results_circle(area, diameter, circumference)
 end
 
 def calculate_for_circle
-
   radius = get_radius
 
   # Guard clause
