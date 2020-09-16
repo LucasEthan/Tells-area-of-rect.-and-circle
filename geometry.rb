@@ -4,10 +4,10 @@ require_relative "rectangle"
 require_relative "circle"
 
 def gets_length_and_width
-  print "What is the length of the rectangle (in meters ?) "
+  print("What is the length of the rectangle (in meters ?) ")
   length = Integer(gets)
 
-  print "What is the width of the rectangle (in meters ?) "
+  print("What is the width of the rectangle (in meters ?) ")
   width = Integer(gets)
 
   [length, width]
@@ -31,7 +31,7 @@ def calculate_for_rectangle
 
   # Guard clause
   unless length.positive? && width.positive?
-    puts "Length and width must be positive"
+    puts("Length and width must be positive")
     return
   end
 
@@ -40,9 +40,9 @@ def calculate_for_rectangle
   display_results_rectangle(area, perimeter)
 end
 
-def gets_radius
-  print "What is the radius of the circle (in meters)? "
-  radius = Integer(gets)
+def prompt_radius
+  print("What is the radius of the circle (in meters)? ")
+  Integer(gets)
 end
 
 def perform_calculations_circle(radius)
@@ -61,7 +61,7 @@ def display_results_circle(area, diameter, circumference)
 end
 
 def calculate_for_circle
-  radius = get_radius
+  radius = prompt_radius
 
   # Guard clause
   unless radius.positive?
@@ -93,6 +93,6 @@ begin
     break if choice == "Y"
   end
 
-rescue ArgumentError => e
+rescue ArgumentError
   puts "You have entered an invalid input"
 end
